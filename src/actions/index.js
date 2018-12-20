@@ -4,14 +4,10 @@ export function GetAllData(){
     return(dispatch) => {        
         const urlAllData = "https://apihospital00.herokuapp.com/api/hotel?name=all&city=all&cat=all&admin=admin&limit=20&active=all";
         return axios.get(urlAllData,{
-            method: 'GET',
-            mode: 'no-cors',
             headers: {
-              'Access-Control-Allow-Origin': '*',
-              'Content-Type': 'application/json',
-            },
-            withCredentials: true,
-            credentials: 'same-origin',
+                'Content-Type': 'application/json;charset=UTF-8',
+                "Access-Control-Allow-Origin": "*",
+            }
           })
         .then((response) => {
             console.log(response.data);
