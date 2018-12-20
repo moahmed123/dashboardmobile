@@ -2,11 +2,11 @@ import axios from 'axios';
 
 export function GetAllData(){
     return(dispatch) => {        
-        const urlAllData = "http://apihospital00.herokuapp.com/api/hotel?name=all&city=all&cat=all&admin=admin&limit=20&active=all";
+        const urlAllData = "https://apihospital00.herokuapp.com/api/hotel?name=all&city=all&cat=all&admin=admin&limit=20&active=all";
         return axios.get(urlAllData,{
             headers: {                
-                "Access-Control-Allow-Origin": " http://127.0.0.1:3000",
-                "Access-Control-Allow-Methods": "POST",
+                "Access-Control-Allow-Origin": " https://127.0.0.1:3000",
+                "Access-Control-Allow-Methods": "GET",
                 "Access-Control-Allow-Headers": "Content-Type, Authorization"
             }
           })
