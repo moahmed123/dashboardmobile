@@ -9,7 +9,7 @@ export function GetAllData(){
               },
               proxy: {
                 host: '104.236.174.88',
-                port: 3128
+                port: 3000
               }              
         })
         .then((response) => {
