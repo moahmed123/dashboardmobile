@@ -2,11 +2,11 @@ import axios from 'axios';
 
 export function GetAllData(){
     return(dispatch) => {        
-        const urlAllData = "https://apihospital00.herokuapp.com/api/hotel?name=all&city=all&cat=all&admin=admin&limit=20&active=all";
+        const urlAllData = "http://apihospital00.herokuapp.com/api/hotel?name=all&city=all&cat=all&admin=admin&limit=20&active=all";
         return axios.get(urlAllData,{
             headers: {
                 'Content-Type': 'application/json;charset=UTF-8',
-                "Access-Control-Allow-Origin": "https://dashboardmobile.herokuapp.com",
+                "Access-Control-Allow-Origin": "*",
             }
           })
         .then((response) => {
