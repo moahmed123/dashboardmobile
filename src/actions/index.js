@@ -3,7 +3,15 @@ import axios from 'axios';
 export function GetAllData(){
     return(dispatch) => {        
         const urlAllData = "https://apihospital00.herokuapp.com/api/hotel?name=all&city=all&cat=all&admin=admin&limit=20&active=all";
-        return axios.get(urlAllData)
+        return axios.get(urlAllData,{
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+              },
+              proxy: {
+                host: '104.236.174.88',
+                port: 3128
+              }              
+        })
         .then((response) => {
             console.log(response.data);
             dispatch(ActionAllData(response.data)); 
